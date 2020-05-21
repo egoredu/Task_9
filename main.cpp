@@ -35,7 +35,7 @@ int main() {
     map<string, vector<string>> dict;
 
     ifstream fin;
-    cout << "Введите путь к входному файлу:\n";
+    cout << "Enter the input file path:\n";
     cin >> filename_in;
     fin.open(filename_in);
 
