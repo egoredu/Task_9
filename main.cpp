@@ -15,7 +15,7 @@ void updateMap(map<string, vector<string>> &dict, string desc) {
     }
     id += 3; // переступаем через тире
     while (id != desc.end()) {
-        while ((*id != ',') && (*id != ' ') && (id != desc.end())) {  // выделяем переводы
+        while ((id != desc.end()) && (*id != ',') && (*id != ' ')) {  // выделяем переводы
             translation += (*id);
             ++id;
         }
@@ -24,8 +24,7 @@ void updateMap(map<string, vector<string>> &dict, string desc) {
             //cout << translation << '\n';
             translation.clear();
         }
-        if (*id == ',') id += 2;
-        else break; // дошли до конца
+        if (id != desc.end() && (*id == ',')) id += 2; // дошли до конца
 
     }
 }
