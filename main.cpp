@@ -24,8 +24,7 @@ void updateMap(map<string, vector<string>> &dict, string desc) {
             //cout << translation << '\n';
             translation.clear();
         }
-        if (*id == ',') id += 2;
-        else break; // дошли до конца
+        if (id != desc.end() && (*id == ',')) id += 2; // дошли до конца
 
     }
 }
